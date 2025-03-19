@@ -5,13 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'cd /var/jenkins_home/workspace/PES2UG22CS180-1/main && g++ hello.cpp -o hello_pipeline'
+                sh 'cd /var/jenkins_home/workspace/PES2UG22CS180/main && g++ hello.cpp -o hello_pipeline'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'cd /var/jenkins_home/workspace/PES2UG22CS180-1/main && ./hello_pipeline'
+                sh 'cd /var/jenkins_home/workspace/PES2UG22CS180/main && ./hello_pipeline'
             }
         }
         stage('Deploy') {
